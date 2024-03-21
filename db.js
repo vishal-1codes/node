@@ -2,7 +2,7 @@ const mongoose=require('mongoose')
 
 const connectDB=async()=>{
     try{
-        await mongoose.connect('mongodb://localhost:27017/node',{
+        await mongoose.connect('mongodb+srv://vishalpawar:lx0V4Q4EWJRMXJTU@own-data.unin18g.mongodb.net/?retryWrites=true&w=majority&appName=own-data?directConnection=true',{
             useNewUrlParser:true,
             useUnifiedTopology:true
         });
