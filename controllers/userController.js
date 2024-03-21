@@ -10,6 +10,16 @@ const createUser=async(req,res)=>{
     }
 };
 
+
+const getUser=async(req,res)=>{
+    try{
+        const user=await User.find()
+        res.status(201).json(user)
+    }catch(error){
+        res.status(500).json({message:error.message})
+    }
+};
+
 const deleteUser=async(req,res)=>{
     try{
         const {id}=req.params;
@@ -32,5 +42,5 @@ const putUser=async(req,res)=>{
 };
 
 module.exports={
-    createUser,deleteUser,putUser
+    createUser,deleteUser,putUser,getUser
 }
