@@ -4,10 +4,12 @@ import userRouter from './routers/userRouters.js'; // Assuming userRouters.js ex
 import joblistRouter from './routers/joblistRouters.js';
 
 const app = express();
+const cors = require("cors");
 
 connectDB();
 
 app.use(express.json());
+app.use(cors());
 
 app.use('/api', userRouter,joblistRouter);
 
