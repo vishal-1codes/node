@@ -2,11 +2,9 @@ import express from 'express';
 import connectDB from './db.js'; // Assuming db.js exports a function
 import userRouter from './routers/userRouters.js'; // Assuming userRouters.js exports a router
 import joblistRouter from './routers/joblistRouters.js';
-import cors from 'cors';
+
 const app = express();
 
-
-app.use(cors())
 
 connectDB();
 
